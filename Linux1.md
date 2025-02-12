@@ -3,8 +3,7 @@
 # **1. What is Linux?**
 - Linux là một họ hệ điều hành mã nguồn mở và miễn phí, có khả năng phục hồi và linh hoạt. Vào năm 1991,Linus Torvalds đã xây dựng nên nó. Mã nguồn của hệ 
   thống có thể truy cập được cho mọi người để bất kỳ ai cũng có thể xem và thay đổi, khiến cho việc bất kỳ ai cũng có thể thấy hệ thống hoạt động như thế 
-  nào 
-  trở nên tuyệt vời. Mọi người trên khắp thế giới được khuyến khích cùng nhau làm việc và tiếp tục phát triển Linux vì tính mở của nó.
+  nào trở nên tuyệt vời. Mọi người trên khắp thế giới được khuyến khích cùng nhau làm việc và tiếp tục phát triển Linux vì tính mở của nó.
 
 # **2. The basic features of Linux OS?**
 
