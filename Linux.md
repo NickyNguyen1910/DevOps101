@@ -2,42 +2,43 @@
 
 # **1. What is Linux?**
 - Linux là một họ hệ điều hành mã nguồn mở và miễn phí, có khả năng phục hồi và linh hoạt. Vào năm 1991,Linus Torvalds đã xây dựng nên nó. Mã nguồn của hệ 
-  thống có thể truy cập được cho mọi người để bất kỳ ai cũng có thể xem và thay đổi, khiến cho việc bất kỳ ai cũng có thể thấy hệ thống hoạt động như thế nào 
+  thống có thể truy cập được cho mọi người để bất kỳ ai cũng có thể xem và thay đổi, khiến cho việc bất kỳ ai cũng có thể thấy hệ thống hoạt động như thế 
+  nào 
   trở nên tuyệt vời. Mọi người trên khắp thế giới được khuyến khích cùng nhau làm việc và tiếp tục phát triển Linux vì tính mở của nó.
 
 # **2. The basic features of Linux OS?**
 
-- Mã nguồn mở
+- **Mã nguồn mở(Open-source)**
   - Linux là hệ điều hành mã nguồn mở, nghĩa là mã nguồn của nó có sẵn cho mọi người xem, sửa đổi và phân phối lại.  
   - Điều này giúp cộng đồng phát triển mạnh mẽ và liên tục cải tiến hệ điều hành.
 
-- Đa người dùng
+- **Đa người dùng(Multiuser)**
   - Nhiều người dùng có thể đăng nhập và sử dụng hệ thống cùng lúc mà không ảnh hưởng đến hoạt động của nhau.  
   - Hệ thống quản lý quyền truy cập chặt chẽ, đảm bảo tính bảo mật cho từng người dùng.
 
-- Đa nhiệm (Multitasking)
+- **Đa nhiệm (Multitasking)**
   - Linux hỗ trợ chạy nhiều tiến trình (process) đồng thời. Mỗi tiến trình có thể thực hiện một tác vụ riêng biệt và không làm gián đoạn tiến trình khác.
 
-- Khả năng di động (Portability)  
+- **Khả năng di động (Portability)**  
   - Linux có thể chạy trên nhiều loại kiến trúc phần cứng khác nhau, từ máy tính cá nhân, máy chủ đến các thiết bị nhúng.
 
-- Hệ thống phân quyền mạnh mẽ (File Permissions)
+- **Hệ thống phân quyền mạnh mẽ (File Permissions)**
   -  Mọi file và thư mục trên Linux đều có quyền truy cập cho từng loại người dùng (chủ sở hữu, nhóm và người dùng khác), giúp bảo vệ dữ liệu và đảm bảo tính bảo mật.
 
-- Hệ thống tập tin phân cấp (Hierarchical File System)
+- **Hệ thống tập tin phân cấp (Hierarchical File System)**
   - Linux sử dụng hệ thống file theo cấu trúc cây phân cấp, bắt đầu từ thư mục gốc `/` và phân chia thành nhiều thư mục con (như `/home`, `/etc`, `/usr`,...).
 
-- Hỗ trợ mạng mạnh mẽ
+- **Hỗ trợ mạng mạnh mẽ**
   - Linux tích hợp sẵn các công cụ và tính năng mạnh mẽ cho việc quản lý và kết nối mạng, từ việc cấu hình mạng nội bộ đến thiết lập máy chủ web, FTP, DNS.
 
-- Bảo mật cao
+- **Bảo mật cao**
   - Linux có nhiều tính năng bảo mật như tường lửa (firewall), SELinux, AppArmor, và hệ thống quản lý user/group.  
   - Các bản vá bảo mật thường xuyên được cập nhật nhanh chóng.
 
-- Quản lý gói (Package Management)
+- **Quản lý gói (Package Management)**
   -  Các bản phân phối Linux cung cấp hệ thống quản lý gói như `apt`, `yum`, hoặc `dnf` để dễ dàng cài đặt, cập nhật và gỡ bỏ phần mềm.
 
-- Khả năng lập trình mạnh mẽ
+- **Khả năng lập trình mạnh mẽ**
   - Linux là môi trường lý tưởng cho các nhà phát triển vì tích hợp nhiều công cụ lập trình như Bash, Python, GCC, Git, và nhiều thư viện mã nguồn mở khác.
 
 # **3. List some popular Linux Distro?**
@@ -69,15 +70,15 @@
 # **6. File permissions of Linux? Structure of a Linux file’s permission, how to change a file’s permission?**
 - Có ba loại quyền tệp trong Linux: Đọc , Ghi và Thực thi .
 
-  - Đọc (r): Cung cấp quyền truy cập để mở và xem nội dung
-  - Viết (w): Cung cấp quyền truy cập để sửa đổi (hoặc xóa) nội dung hoặc tệp
-  - Thực thi (x): Cung cấp quyền truy cập để chạy tệp 
+  - **Đọc (r)**: Cung cấp quyền truy cập để mở và xem nội dung
+  - **Viết (w)**: Cung cấp quyền truy cập để sửa đổi (hoặc xóa) nội dung hoặc tệp
+  - **Thực thi (x)**: Cung cấp quyền truy cập để chạy tệp 
 
 - Trong quyền tệp sẽ có 3 thành phần chính là ba bộ ba ký tự. Mỗi ký tự “rwx” trong ba ký tự này đề cập đến một thao tác khác nhau mà bạn có thể thực hiện trên tệp.Bộ ba kí tự đó đại diện cho:
   
-  - Owners: Những quyền này chỉ áp dụng cho những cá nhân sở hữu các tệp hoặc thư mục
-  - Group: Quyền có thể được chỉ định cho một nhóm người dùng cụ thể, chỉ ảnh hưởng đến những người trong nhóm đó
-  - Others user: Các quyền này áp dụng chung cho tất cả người dùng trên hệ thống
+  - **Owners**: Những quyền này chỉ áp dụng cho những cá nhân sở hữu các tệp hoặc thư mục
+  - **Group**: Quyền có thể được chỉ định cho một nhóm người dùng cụ thể, chỉ ảnh hưởng đến những người trong nhóm đó
+  - **Others user**: Các quyền này áp dụng chung cho tất cả người dùng trên hệ thống
 ```
 ---     ---     ---
 rwx     rwx     rwx
@@ -120,24 +121,24 @@ nickynguyen1910@Nicky:~/test$ ls -l
 
 - Shell có hai cách sử dụng chính:
 
-  - Lệnh tương tác (interactive commands): Các lệnh được nhập từng cái một và thực thi ngay lập tức.
-  - Lệnh kịch bản (script commands): Là các tệp chứa một chuỗi các lệnh để thực hiện một số tác vụ tự động (thường là các tác vụ lặp đi lặp lại hoặc phức 
+  - **Lệnh tương tác (interactive commands)**: Các lệnh được nhập từng cái một và thực thi ngay lập tức.
+  - **Lệnh kịch bản (script commands)**: Là các tệp chứa một chuỗi các lệnh để thực hiện một số tác vụ tự động (thường là các tác vụ lặp đi lặp lại hoặc phức 
     tạp).
 
 -> Chính nhờ khả năng hoạt động theo hai cách này mà shell trở thành một thành phần thiết yếu cho cả những người dùng cơ bản với giao diện đơn giản nhất và cả những người dùng cao cấp nhất với các terminal phức tạp.
 
 - Các loại Shell phổ biến trong Linux:
-  - Bourne Shell (sh): Shell gốc trong các hệ thống Unix. Đơn giản, dễ sử dụng và rất phổ biến cho việc viết Shell script.Nhược điểm là ít tính năng hiện đại so với các Shell khác. File mặc định: `/bin/sh`
+  - **Bourne Shell (sh)**: Shell gốc trong các hệ thống Unix. Đơn giản, dễ sử dụng và rất phổ biến cho việc viết Shell script.Nhược điểm là ít tính năng hiện đại so với các Shell khác. File mặc định: `/bin/sh`
 
-  - Bourne Again Shell (Bash): Shell phổ biến nhất trên Linux hiện nay. Tích hợp nhiều tính năng nâng cao hơn so với Bourne Shell, chẳng hạn như auto-completion, lịch sử lệnh và quản lý biến môi trường tốt hơn. File mặc định: `/bin/bash`
+  - **Bourne Again Shell (Bash)**: Shell phổ biến nhất trên Linux hiện nay. Tích hợp nhiều tính năng nâng cao hơn so với Bourne Shell, chẳng hạn như auto-completion, lịch sử lệnh và quản lý biến môi trường tốt hơn. File mặc định: `/bin/bash`
 
-  - C Shell (csh): Lấy cảm hứng từ ngôn ngữ C, có cú pháp gần giống C. Hỗ trợ nhiều tính năng như quản lý lịch sử lệnh và aliasing. File mặc định: `/bin/csh`
+  - **C Shell (csh)**: Lấy cảm hứng từ ngôn ngữ C, có cú pháp gần giống C. Hỗ trợ nhiều tính năng như quản lý lịch sử lệnh và aliasing. File mặc định: `/bin/csh`
 
 8. Compare CLI and GUI in Linux?
 
-- Command Line Interface(CIL) có thể hiểu chính là giao diện dòng lệnh người dùng viết các lệnh trong cửa sổ terminal hoặc console để tương tác với hệ điều hành
+- *Command Line Interface(CIL)* có thể hiểu chính là giao diện dòng lệnh người dùng viết các lệnh trong cửa sổ terminal hoặc console để tương tác với hệ điều hành
 
-- Graphical User Interface(GUI) cho phép người dùng sử dụng đồ họa để tương tác với hệ điều hành. Trong giao diện người dùng đồ họa, các menu được cung cấp như cửa sổ, thanh cuộn, nút, trình hướng dẫn, hình ảnh vẽ, biểu tượng thay thế, v.v khiến cho việc thao tác với hệ điều hành trở nên trực quan và dễ hiểu
+- *Graphical User Interface(GUI)* cho phép người dùng sử dụng đồ họa để tương tác với hệ điều hành. Trong giao diện người dùng đồ họa, các menu được cung cấp như cửa sổ, thanh cuộn, nút, trình hướng dẫn, hình ảnh vẽ, biểu tượng thay thế, v.v khiến cho việc thao tác với hệ điều hành trở nên trực quan và dễ hiểu
 
 Dưới đây là bảng so sánh giữa CLI và GUI
 
@@ -157,9 +158,54 @@ Dưới đây là bảng so sánh giữa CLI và GUI
 | 12 | CLI cho phép người dùng chỉ cần viết một loạt lệnh để thực hiện một tác vụ hoặc chạy một chương trình | GUI không cung cấp chức năng lập trình một chuỗi lệnh | 
 
 
-
-
 9. What is hard link and soft link, compares these two types of link?
+
+- **Hard Link**
+  - Là một liên kết trỏ trực tiếp đến inode (chỉ mục) của file gốc.
+  - Không tạo ra file mới, chỉ tạo thêm một tên khác cho cùng một dữ liệu.
+  - Nếu file gốc bị xóa, dữ liệu vẫn tồn tại vì hard link vẫn tham chiếu đến inode gốc.
+  - Không thể tạo hard link cho thư mục.
+  - Hard link chỉ hoạt động trong cùng một phân vùng (filesystem).
+
+Example:
+```
+nickynguyen1910@Nicky:~/test$ echo "chao em" > file1.txt
+nickynguyen1910@Nicky:~/test$ cat file1.txt
+chao em
+nickynguyen1910@Nicky:~/test$ ln file1.txt heygirl.txt
+nickynguyen1910@Nicky:~/test$ rm file1.txt
+nickynguyen1910@Nicky:~/test$ cat heygirl.txt
+chao em
+```
+
+- **Soft Link**
+  - Là một file chứa đường dẫn trỏ đến file/thư mục gốc.
+  - Là một file độc lập, không tham chiếu trực tiếp đến inode gốc.
+  - Nếu file gốc bị xóa, soft link sẽ bị “gãy” (broken link) và không thể truy cập dữ liệu.
+  - Có thể tạo soft link cho cả file và thư mục.
+  - Hoạt động trên nhiều phân vùng khác nhau.
+
+Example:
+```
+nickynguyen1910@Nicky:~/test$ echo "em nha o dau the" > file2.txt
+nickynguyen1910@Nicky:~/test$ cat file2.txt
+em nha o dau the
+nickynguyen1910@Nicky:~/test$ ln -s file2.txt girl.txt
+nickynguyen1910@Nicky:~/test$ rm file2.txt
+nickynguyen1910@Nicky:~/test$ cat girl.txt
+cat: girl.txt: No such file or directory
+```
+
+Bảng so sánh giữa Hard Link và Soft Link
+
+|   | Hard Link | Soft Link | 
+|-------|-------|-------|
+| Số inode | Các tập tin được liên kết cứng sẽ có cùng số inode | Các tập tin được liên kết mềm sẽ có số inode khác nhau |
+| Thư mục | Không được phép sử dụng liên kết cứng cho các thư mục. (Chỉ có siêu người dùng* mới có thể thực hiện được) | Có thể sử dụng liên kết mềm để liên kết các thư mục |
+| Hệ thống tập tin | Không thể sử dụng trên nhiều hệ thống tập tin | Nó có thể được sử dụng trên nhiều hệ thống tập tin |
+| Dữ liệu | Dữ liệu có trong tệp gốc vẫn có sẵn trong các liên kết cứng | Liên kết mềm chỉ trỏ đến tên tệp, không lưu giữ dữ liệu của tệp | 
+| Xóa tập tin gốc | Nếu tệp gốc bị xóa, liên kết vẫn hoạt động vì nó truy cập vào dữ liệu mà tệp gốc đã truy cập | Nếu tệp gốc bị xóa, liên kết sẽ không hoạt động vì nó không truy cập được dữ liệu của tệp gốc | 
+| Tốc độ | Liên kết cứng tương đối nhanh hơn | Liên kết mềm chậm hơn tương đối | 
 
 10. The command to create a hard link and soft link?
 
