@@ -215,12 +215,18 @@ Bảng so sánh giữa Hard Link và Soft Link
 ln {source} {link}
 ln /path/to/source /path/to/link
 ```
+- Cú pháp để tạo Soft Link cụ thể như sau:
+```
+ln -s {source} {link}
+```
 Trong đó 
   - source: file hiện tại
-  - link: file muốn liên kết bằng hard link
+  - link: file muốn liên kết bằng hard/soft link
 
 Muốn tìm hiểu thêm ta có thể dùng câu lênh `man ln` để biết thêm
 
 # **11. How many streams in Linux? Purpose of streams? List all the streams in Linux?**
+
+
 
   
