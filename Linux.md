@@ -115,7 +115,7 @@ nickynguyen1910@Nicky:~/test$ ls -l
 Đoạn mã trên thu hồi tất cả các quyền đọc(r), ghi(w) và thực thi(x) từ tất cả người dùng(u), nhóm(g) và những người khác(o) đối với file `check.sh`
 
 
-7. What is Linux Shell? How many types of Shell?
+# **7. What is Linux Shell? How many types of Shell?**
 - Shell trong Linux đơn giản là một trình thông dịch lệnh cung cấp giao diện người dùng cho hệ điều hành. Nó đóng vai trò chính trong việc kiểm tra các đầu 
   vào của người dùng, chuyển đổi chúng thành các chỉ thị hệ thống và thực thi tương ứng.
 
@@ -134,7 +134,7 @@ nickynguyen1910@Nicky:~/test$ ls -l
 
   - **C Shell (csh)**: Lấy cảm hứng từ ngôn ngữ C, có cú pháp gần giống C. Hỗ trợ nhiều tính năng như quản lý lịch sử lệnh và aliasing. File mặc định: `/bin/csh`
 
-8. Compare CLI and GUI in Linux?
+# **8. Compare CLI and GUI in Linux?**
 
 - *Command Line Interface(CIL)* có thể hiểu chính là giao diện dòng lệnh người dùng viết các lệnh trong cửa sổ terminal hoặc console để tương tác với hệ điều hành
 
@@ -158,7 +158,7 @@ Dưới đây là bảng so sánh giữa CLI và GUI
 | 12 | CLI cho phép người dùng chỉ cần viết một loạt lệnh để thực hiện một tác vụ hoặc chạy một chương trình | GUI không cung cấp chức năng lập trình một chuỗi lệnh | 
 
 
-9. What is hard link and soft link, compares these two types of link?
+# **9. What is hard link and soft link, compares these two types of link?**
 
 - **Hard Link**
   - Là một liên kết trỏ trực tiếp đến inode (chỉ mục) của file gốc.
@@ -207,8 +207,20 @@ Bảng so sánh giữa Hard Link và Soft Link
 | Xóa tập tin gốc | Nếu tệp gốc bị xóa, liên kết vẫn hoạt động vì nó truy cập vào dữ liệu mà tệp gốc đã truy cập | Nếu tệp gốc bị xóa, liên kết sẽ không hoạt động vì nó không truy cập được dữ liệu của tệp gốc | 
 | Tốc độ | Liên kết cứng tương đối nhanh hơn | Liên kết mềm chậm hơn tương đối | 
 
-10. The command to create a hard link and soft link?
+# **10. The command to create a hard link and soft link?**
 
-11. How many streams in Linux? Purpose of streams? List all the streams in Linux?
+- Như ví dụ ở trên thì ta có thể thấy để tạo một Hard Link ta dùng câu lệnh `ln file1 file2` còn để tạo một Soft Link ta dùng câu lệnh `ln -s file1 file2`
+- Cú pháp để tạo Hard Link cụ thể như sau:
+```
+ln {source} {link}
+ln /path/to/source /path/to/link
+```
+Trong đó 
+  - source: file hiện tại
+  - link: file muốn liên kết bằng hard link
+
+Muốn tìm hiểu thêm ta có thể dùng câu lênh `man ln` để biết thêm
+
+# **11. How many streams in Linux? Purpose of streams? List all the streams in Linux?**
 
   
