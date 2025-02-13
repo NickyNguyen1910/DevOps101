@@ -422,4 +422,53 @@ root          87  0.0  0.0  21836  5680 ?        Ss   08:09   0:00 /lib/systemd/
 - Câu lệnh hoặc tên chương trình đã khởi động tiến trình đó.
 - Nếu chương trình được khởi động kèm các tham số, toàn bộ câu lệnh sẽ được hiển thị.
 
+*Ngoài ra ta có thể sử dụng `ps aux | grep <tên tiến trình>` để lọc theo tên tiến trình.Ví dụ:
+
+```
+nickynguyen1910@Nicky:~$ ps aux | grep nginx
+root         210  0.0  0.0   9788   900 ?        Ss   08:09   0:00 nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf
+www-data     211  0.0  0.0  10552  3516 ?        S    08:09   0:00 nginx: worker process
+www-data     212  0.0  0.0  10552  3516 ?        S    08:09   0:00 nginx: worker process
+www-data     213  0.0  0.0  10552  3516 ?        S    08:09   0:00 nginx: worker process
+nickyng+    3570  0.0  0.0   4028  2080 pts/0    S+   10:34   0:00 grep --color=auto nginx
+```
+
+# **4.Compare the `rsync` command and `cp` command**
+
+|  | rsync | cp |
+|--|--|--|
+| Chức năng chính | Dùng để đồng bộ hóa dữ liệu giữa hai thư mục hoặc hệ thống, cho phép sao chép những file đã thay đổi, giúp tiết kiệm thời gian và băng thông | Lệnh dùng để sao chép file hoặc thư mục một cách cơ bản từ nguồn đến đích. Không có chức năng đồng bộ hóa | 
+| Tính năng nổi bật | **Đồng bộ hóa thông minh**: Chỉ sao chép file mới hoặc file đã thay đổi <br>**Hỗ trợ nén**: Giảm dung lượng dữ liệu khi truyền qua mạng <br>**Có thể truyền qua mạng**: Cho phép sao chép file giữa các máy tính qua SSH <br>**Kiểm tra checksum**: Đảm bảo dữ liệu được sao chép chính xác <br>**Tiếp tục nếu bị gián đoạn**: Hỗ trợ tiếp tục sao chép khi gặp lỗi hoặc mất kết nối | **Sao chép cơ bản**: Chỉ sao chép file hoặc thư mục đầy đủ <br>**Không kiểm tra dữ liệu**: Không có cơ chế kiểm tra checksum <br>**Không hỗ trợ mạng**: Không thể sao chép qua mạng <br>**Không hỗ trợ tiếp tục**: Nếu bị gián đoạn, phải sao chép lại từ đầu | 
+| Tốc độ | Nhanh hơn khi làm việc với lượng lớn dữ liệu hoặc sao chép qua mạng vì nó chỉ sao chép phần dữ liệu thay đổi | Chậm hơn vì nó sao chép toàn bộ file hoặc thư mục, ngay cả khi không có thay đổi gì |
+
+**Cách dùng**
+
+`rsync` : `rsync -avz /source/ /destination/`
+
+`cp` : `cp -r /source/ /destination/`
+
+# **5.Which command is used to create a new Linux user with home directory?**
+
+Command được dùng để tạo một user mới với thư mục home trên Linux là:
+
+`sudo adduser <tên_user>` 
+
+Lệnh adduser sẽ:
+- Tạo thư mục home cho user mới trong `/home/<tên_user>`.
+- Đặt các quyền mặc định cho thư mục home.
+- Tạo group cùng tên với user mới.
+- Cho phép bạn nhập mật khẩu và thông tin cá nhân khác cho user (tên đầy đủ, số điện thoại, v.v.)
+
+
+Khác biệt với `useradd`
+
+||
+
+
+
+
+
+
+
+
 
