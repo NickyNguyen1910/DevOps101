@@ -276,3 +276,150 @@ facebook.com.           35      IN      A       157.240.199.35
 
 # **3.How do you list all the running/ list some specific processes in Linux?  Explain all the columns and information you get when using the list process command?**
 
+Trong Linux, `top` là một công cụ động và tương tác cung cấp thông tin thời gian thực về các quy trình hệ thống. Lệnh này cung cấp cái nhìn toàn diện về các quy trình đang chạy, việc sử dụng tài nguyên hệ thống và các số liệu quan trọng khác của hệ thống. `htop`là trình xem quy trình tương tác dành cho Linux, cung cấp giải pháp thay thế trực quan hấp dẫn và giàu tính năng cho lệnh `top`. Nó cho phép người dùng giám sát và quản lý các quy trình hệ thống theo thời gian thực với giao diện dễ sử dụng
+
+![image_2025-02-13_100938739](https://github.com/user-attachments/assets/8ba9aa7f-175c-45ac-b44a-b6901b4bc756)
+
+**PID (Process ID)**
+
+- Đây là mã định danh duy nhất của mỗi tiến trình trên hệ thống.
+- Mỗi tiến trình khi khởi động sẽ được gán một PID, và PID này sẽ không thay đổi cho đến khi tiến trình kết thúc.
+
+**USER (Owner of the process)**
+
+- Người dùng hoặc nhóm người dùng sở hữu và có quyền điều khiển tiến trình.
+
+**PRI (Priority)**
+
+- Độ ưu tiên của tiến trình, xác định mức độ ưu tiên CPU sẽ xử lý tiến trình đó.
+- Số càng nhỏ thì độ ưu tiên càng cao. Hệ thống sẽ tự động điều chỉnh độ ưu tiên dựa trên hành vi và trạng thái của tiến trình.
+
+**NI (Nice Value)**
+
+- Giá trị "Nice" cho thấy mức độ thiện chí của tiến trình khi chia sẻ tài nguyên CPU.
+- Phạm vi: từ -20 (ưu tiên cao nhất) đến +19 (ưu tiên thấp nhất).
+- Người dùng có thể thay đổi giá trị này bằng lệnh `renice`.
+
+**VIRT (Virtual memory usage)**
+
+- Tổng dung lượng bộ nhớ ảo mà tiến trình được cấp phát (bao gồm cả bộ nhớ dùng chung, thư viện và bộ nhớ được phân trang ra đĩa).
+
+**RES (Resident Set Size)**
+
+- Bộ nhớ vật lý thực tế đang được tiến trình sử dụng, không bao gồm bộ nhớ đã bị hoán đổi (swapped out).
+
+**SHR (Shared memory)**
+
+- Phần bộ nhớ dùng chung giữa các tiến trình.
+- Thường bao gồm thư viện dùng chung và các phân vùng bộ nhớ dùng chung khác.
+
+**S (Process status)**
+
+- Trạng thái hiện tại của tiến trình:
+
+`S`: Sleeping (Đang chờ hoặc tạm dừng).
+`R`: Running (Đang chạy).
+`I`: Idle (Nhàn rỗi).
+`D`: Uninterruptible sleep (Đang chờ xử lý I/O).
+`T`: Stopped (Bị dừng).
+`Z`: Zombie (Tiến trình đã chết nhưng chưa được thu hồi).
+
+**CPU% (Percentage of CPU usage)**
+
+- Phần trăm CPU mà tiến trình đang sử dụng.
+
+**MEM% (Percentage of memory usage)**
+
+- Phần trăm bộ nhớ vật lý (RAM) được tiến trình chiếm dụng so với tổng bộ nhớ hệ thống.
+
+**TIME+ (Total CPU time)**
+
+- Tổng thời gian CPU đã dành cho tiến trình (tính cả thời gian hệ thống và người dùng).
+- Được hiển thị ở định dạng `mm:ss.ms`.
+
+**Command (Command or process name)**
+
+- Câu lệnh hoặc tên của chương trình khởi động tiến trình.
+- Đôi khi nó có thể bao gồm toàn bộ đường dẫn hoặc các tham số đi kèm với câu lệnh.
+
+---
+Ngoài ra ta cũng có thể sử dụng câu lệnh `ps` để hiển thị trạng thái của các tiến trình tại một thời điểm cụ thể (chỉ hiển thị tĩnh, không cập nhật tự động).Dưới đây là một số cách dùng câu lệnh phổ biến:
+
+`ps aux` 
+```
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 167224 12712 ?        Ss   08:09   0:02 /lib/systemd/systemd --system --deserialize 29
+root           2  0.0  0.0   2776  1924 ?        Sl   08:09   0:00 /init
+root           7  0.0  0.0   2776   132 ?        Sl   08:09   0:00 plan9 --control-socket 7 --log-level 4 --server-
+root          60  0.0  0.1  47740 14896 ?        S<s  08:09   0:00 /lib/systemd/systemd-journald
+root          87  0.0  0.0  21836  5680 ?        Ss   08:09   0:00 /lib/systemd/systemd-udevd
+```
+**USER**
+
+- Người dùng (user) sở hữu tiến trình đó.
+- Tiến trình này sẽ chạy với quyền hạn của người dùng được liệt kê.
+
+**PID (Process ID)**
+
+- Mã định danh của tiến trình. Đây là một số nguyên duy nhất mà hệ thống cấp cho mỗi tiến trình khi nó được tạo ra.
+
+**%CPU**
+
+- Phần trăm CPU mà tiến trình đang sử dụng tại thời điểm kiểm tra.
+- Giá trị này thay đổi liên tục khi tiến trình tiêu thụ nhiều hoặc ít tài nguyên hơn.
+
+**%MEM**
+
+- Phần trăm bộ nhớ vật lý (RAM) mà tiến trình đang sử dụng, tính theo tỷ lệ với tổng bộ nhớ của hệ thống.
+
+**VSZ (Virtual Memory Size)**
+
+- Kích thước bộ nhớ ảo được tiến trình cấp phát, tính bằng kilobytes.
+- Bao gồm toàn bộ bộ nhớ thực tế, thư viện, các phân vùng được phân trang ra đĩa (swap), và các không gian bộ nhớ được cấp phát nhưng chưa sử dụng.
+
+**RSS (Resident Set Size)**
+
+- Kích thước bộ nhớ thực tế đang được tiến trình sử dụng, không bao gồm bộ nhớ đã bị hoán đổi.
+- Được tính bằng kilobytes và thể hiện lượng RAM thực tế mà tiến trình đang sử dụng.
+
+**TTY (Terminal Type)**
+
+- Terminal (hoặc pseudo-terminal) mà tiến trình được khởi động từ đó.
+- Nếu là ?, điều đó có nghĩa là tiến trình không gắn liền với bất kỳ terminal nào (thường là các dịch vụ nền).
+
+**STAT (State)**
+
+- Trạng thái hiện tại của tiến trình. Một số trạng thái phổ biến:
+
+  - `R`: Running (đang chạy).
+  - `S`: Sleeping (ngủ ngắn hạn, đợi sự kiện).
+  - `D`: Uninterruptible Sleep (đợi I/O không thể bị ngắt).
+  - `T`: Stopped (bị dừng, do tín hiệu hoặc debug).
+  - `Z`: Zombie (tiến trình đã kết thúc nhưng chưa được thu hồi).
+  - `I`: Idle (nhàn rỗi).
+
+- Các ký tự bổ sung có thể xuất hiện:
+
+  - `s` (Session Leader): Tiến trình là leader của một session (ví dụ, tiến trình đầu tiên trong một phiên đăng nhập).
+  - `+` (Foreground Process Group): Tiến trình đang thuộc về một nhóm tiến trình foreground (đang hoạt động trên terminal).
+  - `l` (Multi-threaded): Tiến trình là một tiến trình đa luồng.
+  - `<` (High Priority): Tiến trình có ưu tiên cao hơn bình thường.
+  - `N` (Low Priority - Nice value lớn): Tiến trình có ưu tiên thấp hơn các tiến trình khác.
+  - `L` (Locked in memory):Tiến trình bị khóa một số trang bộ nhớ trong RAM và không thể hoán đổi ra ổ đĩa (swap).
+  - `X` (Dead): Tiến trình đã bị dừng hoặc không còn tồn tại (hiếm khi gặp).
+
+**START**
+
+- Thời điểm mà tiến trình được khởi động.
+- Nếu tiến trình chạy lâu, nó có thể hiển thị ngày hoặc thời gian chính xác.
+
+**TIME**
+
+- Tổng thời gian CPU đã sử dụng bởi tiến trình, tính cả thời gian người dùng và thời gian hệ thống.
+
+**COMMAND**
+
+- Câu lệnh hoặc tên chương trình đã khởi động tiến trình đó.
+- Nếu chương trình được khởi động kèm các tham số, toàn bộ câu lệnh sẽ được hiển thị.
+
+
