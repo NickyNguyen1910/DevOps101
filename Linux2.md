@@ -462,7 +462,17 @@ Lệnh adduser sẽ:
 
 Khác biệt với `useradd`
 
-||
+|  | adduser | useradd |
+|--|--|--|
+| Khi nào dùng | - Khi bạn muốn thêm user một cách dễ dàng và tự động, với cấu hình mặc định đầy đủ. <br> - Nếu bạn cần tạo home directory, đặt thông tin cá nhân, group, và mật khẩu trong một lần thao tác. | - Khi bạn muốn kiểm soát chi tiết việc tạo user bằng cách sử dụng các tùy chọn cụ thể. <br> - Nếu bạn tạo nhiều user với cấu hình đặc biệt, không cần thư mục home hoặc muốn chỉ định thư mục khác. <br> - Dùng trong scripts hoặc tự động hóa hệ thống vì useradd có thể dễ dàng điều chỉnh thông qua tùy chọn lệnh. <br> |
+| Ưu điểm | - Giao diện thân thiện (hỏi lần lượt các thông tin: mật khẩu, thông tin cá nhân, thư mục home). <br> - Tự động thực hiện các bước mà useradd cần thêm nhiều tùy chọn (như tạo thư mục home, nhóm mặc định, quyền). <br> - Phù hợp cho người dùng không muốn nhớ nhiều tùy chọn lệnh phức tạp. | - Cho phép cấu hình linh hoạt hơn. <br> - Phù hợp cho admin hệ thống chuyên nghiệp hoặc trong các môi trường cần script hóa việc quản lý user. |
+|  |  | Các tùy chọn thông dụng: <br> `-m`: Tạo thư mục home. <br> `-d` <đường dẫn>: Chỉ định thư mục home cụ thể. <br> `-s` <shell>: Chỉ định shell mặc định cho user. <br> `-g` <group>: Chỉ định group chính của user. |
+
+# **6.Compare a thread and a process?**
+
+ 
+
+
 
 
 
