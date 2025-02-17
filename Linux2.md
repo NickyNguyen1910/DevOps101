@@ -470,6 +470,20 @@ Khác biệt với `useradd`
 
 # **6.Compare a thread and a process?**
 
+**Process (Quá trình)**
+
+Process có nghĩa là bất kỳ chương trình (program) nào đang được thực thi. Process control block (Khối điều khiển quá trình) điều khiển hoạt động của mọi process. Process control block chứa thông tin về các process, ví dụ process priority, process id, process state, CPU, register, v.v. Một process có thể tạo ra nhiều process khác được gọi là Child Process. Process mất nhiều thời gian hơn để kết thúc (terminate) và nó bị cô lập (isolated) có nghĩa là nó không chia sẻ bộ nhớ với bất kỳ process nào khác.
+
+Process có thể có các trạng thái sau: new (mới), ready (sẵn sàng), running (đang chạy), waiting (đang chờ), terminated (đã chấm dứt), suspended (bị tạm ngừng).
+
+**Thread (Luồng)**
+
+Thread là phân đoạn của một process có nghĩa là một process có thể có nhiều thread (multiple threads) và nhiều thread này được chứa trong một process. Một thread có 3 trạng thái: running (đang chạy), ready (sẵn sàng), và blocked (bị chặn). Thread tốn ít thời gian hơn để kết thúc (terminate) so với process và KHÔNG giống như process, thread không bị cô lập có nghĩa là thread chia sẻ bộ nhớ với mọi thread khác.
+
+
+
+
+
  
 
 
