@@ -38,3 +38,6 @@ echo "Da liet ke vao file pid_list.txt"
 
 # Write a Bash script that trims leading and trailing whitespace from each line in a text file named "data.txt".
 
+sed 's/^[[:space:]]*//;s/[[:space:]]*$//' data.txt > trimmed_data.txt
+echo "done"
+
